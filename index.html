@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<!-- Primary SEO -->
+<title>KiTools.in — Free Online Tools for India | GST, EMI, SIP & More</title>
+<meta name="description" content="Free online tools for Indians — GST Calculator, EMI Calculator, SIP Calculator, BMI Calculator, Password Generator, QR Code Generator, Income Tax, FD Calculator and 13+ more tools. No login, no ads, instant results."/>
+<meta name="keywords" content="GST calculator India, EMI calculator, SIP calculator, BMI calculator, password generator, QR code generator, income tax calculator, FD calculator, free online tools India, kitools"/>
+<meta name="author" content="KiTools.in"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://kitools.in/"/>
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://kitools.in/"/>
+<meta property="og:title" content="KiTools.in — 13+ Free Online Tools for India"/>
+<meta property="og:description" content="GST, EMI, SIP, BMI, QR Code, Password Generator & more — free tools built for Indians. No login required."/>
+<meta property="og:image" content="https://kitools.in/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="KiTools.in"/>
+<meta property="og:locale" content="en_IN"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://kitools.in/"/>
+<meta name="twitter:title" content="KiTools.in — Free Online Tools for India"/>
+<meta name="twitter:description" content="GST, EMI, SIP, BMI, QR Code, Password Generator & more — 13+ free tools for Indians."/>
+<meta name="twitter:image" content="https://kitools.in/og-image.png"/>
+
+<!-- Structured Data (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "KiTools.in",
+  "url": "https://kitools.in",
+  "description": "Free online tools for India — GST Calculator, EMI Calculator, SIP Calculator, BMI Calculator, Password Generator, QR Code Generator and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://kitools.in/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#050a12;--bg2:#0a1220;--bg3:#0f1a2e;--cyan:#00d4ff;--cyan2:#00a8cc;--gold:#f59e0b;--green:#00ff88;--purple:#a78bfa;--border:#1a3050;--text:#e2e8f0;--muted:#64748b;--card:#0d1f35;--card2:#0a1828;}
+body{background:var(--bg);color:var(--text);font-family:'Exo 2',sans-serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;}
+.nav{position:sticky;top:0;z-index:100;background:rgba(5,10,18,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--cyan),var(--gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 20px rgba(0,212,255,0.4);}
+.logo-text{font-family:'Orbitron',monospace;font-weight:900;font-size:18px;color:var(--cyan);letter-spacing:2px;}
+.logo-sub{font-size:10px;color:var(--muted);letter-spacing:3px;font-family:'Orbitron',monospace;}
+.nav-badge{background:linear-gradient(135deg,#1a3a1a,#0d2a0d);border:1px solid var(--green);color:var(--green);padding:4px 12px;border-radius:20px;font-size:11px;font-family:'Orbitron',monospace;animation:pulse-green 2s infinite;}
+@keyframes pulse-green{0%,100%{box-shadow:0 0 5px rgba(0,255,136,0.3);}50%{box-shadow:0 0 15px rgba(0,255,136,0.6);}}
+.hero{padding:60px 24px 48px;text-align:center;}
+.hero-eyebrow{font-family:'Orbitron',monospace;font-size:11px;color:var(--cyan);letter-spacing:4px;margin-bottom:16px;opacity:0.8;}
+.hero-title{font-family:'Orbitron',monospace;font-size:clamp(28px,6vw,56px);font-weight:900;color:white;line-height:1.1;margin-bottom:8px;}
+.hero-title span{color:var(--cyan);text-shadow:0 0 30px rgba(0,212,255,0.7);}
+.hero-sub{color:var(--muted);font-size:16px;margin-bottom:32px;}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;}
+.stat-num{font-family:'Orbitron',monospace;font-size:24px;font-weight:700;color:var(--cyan);}
+.stat-label{font-size:12px;color:var(--muted);letter-spacing:1px;}
+.search-section{padding:0 24px 32px;max-width:800px;margin:0 auto;}
+.search-wrap{position:relative;}
+.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:18px;}
+#searchInput{width:100%;background:var(--card);border:1px solid var(--border);color:var(--text);padding:14px 16px 14px 48px;border-radius:12px;font-size:15px;font-family:'Exo 2',sans-serif;outline:none;}
+#searchInput:focus{border-color:var(--cyan);}
+.cat-scroll{padding:0 24px 24px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto;}
+.cat-scroll::-webkit-scrollbar{display:none;}
+.cat-btn{white-space:nowrap;padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:var(--card2);color:var(--muted);font-size:13px;cursor:pointer;font-family:'Exo 2',sans-serif;}
+.cat-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,0.08);}
+.tools-section{padding:0 24px 48px;max-width:1200px;margin:0 auto;}
+.section-title{font-family:'Orbitron',monospace;font-size:13px;color:var(--muted);letter-spacing:3px;margin-bottom:20px;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;cursor:pointer;transition:all 0.25s;position:relative;}
+.tool-card:hover,.tool-card.active{border-color:var(--cyan);background:rgba(0,212,255,0.06);box-shadow:0 8px 24px rgba(0,212,255,0.12);}
+.tool-icon{font-size:28px;margin-bottom:10px;display:block;}
+.tool-name{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;}
+.tool-cat{font-size:11px;color:var(--muted);}
+.tool-tag{position:absolute;top:10px;right:10px;font-size:10px;background:rgba(0,212,255,0.12);color:var(--cyan);padding:2px 7px;border-radius:10px;border:1px solid rgba(0,212,255,0.2);}
+.panel{margin:0 24px 48px;max-width:1200px;margin-left:auto;margin-right:auto;background:var(--bg3);border:1px solid var(--cyan2);border-radius:16px;overflow:hidden;box-shadow:0 0 40px rgba(0,212,255,0.1);}
+.panel-header{background:linear-gradient(135deg,var(--bg2),var(--bg3));padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.panel-title{display:flex;align-items:center;gap:12px;}
+.panel-icon{font-size:28px;}
+.panel-name{font-family:'Orbitron',monospace;font-size:16px;color:var(--cyan);font-weight:700;}
+.panel-cat{font-size:12px;color:var(--muted);margin-top:2px;}
+.close-btn{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.3);color:#ff6b6b;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px;}
+.panel-body{padding:24px;display:flex;flex-direction:column;gap:16px;}
+.input-row{display:flex;flex-direction:column;gap:6px;}
+.input-row label{font-size:13px;color:var(--muted);}
+.input-row input,.input-row select,.input-row textarea{background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;font-family:'Exo 2',sans-serif;outline:none;width:100%;}
+.input-row input:focus,.input-row select:focus{border-color:var(--cyan);}
+.input-row select option{background:var(--bg2);}
+.toggle-row{display:flex;gap:8px;flex-wrap:wrap;}
+.tog{padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card2);color:var(--muted);font-size:12px;cursor:pointer;font-family:'Exo 2',sans-serif;}
+.tog.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,0.1);}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:480px){.results{grid-template-columns:repeat(2,1fr);}}
+.res-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
+.res-card.hl{border-color:var(--cyan);background:rgba(0,212,255,0.06);}
+.res-card.ac{border-color:var(--gold);background:rgba(245,158,11,0.06);}
+.res-label{font-size:11px;color:var(--muted);margin-bottom:6px;}
+.res-value{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--text);}
+.res-card.hl .res-value{color:var(--cyan);}
+.res-card.ac .res-value{color:var(--gold);}
+.slider-row{display:flex;flex-direction:column;gap:8px;}
+.slider-top{display:flex;justify-content:space-between;}
+.slider-top label{font-size:13px;color:var(--muted);}
+.slider-val{font-family:'Orbitron',monospace;font-size:13px;color:var(--cyan);}
+input[type=range]{width:100%;accent-color:var(--cyan);}
+.primary-btn{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#000;border:none;padding:13px 24px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Exo 2',sans-serif;width:100%;}
+.answer-box{background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(0,212,255,0.04));border:1px solid rgba(0,212,255,0.3);border-radius:10px;padding:16px 20px;font-family:'Orbitron',monospace;font-size:15px;color:var(--cyan);text-align:center;word-break:break-all;}
+.pwd-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;font-family:monospace;font-size:14px;color:var(--cyan);word-break:break-all;cursor:pointer;position:relative;}
+.strength-bar{background:var(--border);border-radius:3px;height:6px;}
+.strength-fill{height:6px;border-radius:3px;transition:all 0.3s;}
+.qr-center{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.qr-center img{border-radius:12px;border:2px solid var(--cyan);padding:8px;background:white;}
+.dl-btn{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);color:var(--cyan);padding:8px 20px;border-radius:8px;text-decoration:none;font-size:13px;}
+.text-area{background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:12px 14px;border-radius:10px;font-size:14px;font-family:'Exo 2',sans-serif;outline:none;resize:vertical;width:100%;}
+.results3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+@media(max-width:480px){.results3{grid-template-columns:repeat(2,1fr);}}
+.btn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+@media(max-width:480px){.btn-grid{grid-template-columns:repeat(2,1fr);}}
+.case-btn{padding:9px 8px;border-radius:8px;border:1px solid var(--border);background:var(--card2);color:var(--muted);font-size:12px;cursor:pointer;font-family:monospace;}
+.case-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,0.1);}
+.result-text{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;font-size:14px;color:var(--text);word-break:break-word;position:relative;}
+.copy-mini{position:absolute;top:8px;right:8px;background:var(--card);border:1px solid var(--border);color:var(--muted);padding:4px 8px;border-radius:6px;cursor:pointer;font-size:12px;}
+.dual-sel{display:flex;align-items:center;gap:12px;}
+.dual-sel select{flex:1;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;font-family:'Exo 2',sans-serif;outline:none;}
+.color-row{display:flex;gap:12px;align-items:center;}
+input[type=color]{width:56px;height:44px;border-radius:8px;border:2px solid var(--border);cursor:pointer;background:none;padding:2px;}
+.color-prev{height:80px;border-radius:12px;border:1px solid var(--border);}
+.color-vals{display:flex;flex-direction:column;gap:8px;}
+.color-val-row{display:flex;align-items:center;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;cursor:pointer;gap:12px;}
+.cv-label{font-family:'Orbitron',monospace;font-size:11px;color:var(--muted);width:36px;}
+.cv-val{font-family:monospace;font-size:13px;color:var(--text);flex:1;}
+.bmi-result{text-align:center;padding:16px;}
+.bmi-score{font-family:'Orbitron',monospace;font-size:56px;font-weight:900;}
+.bmi-cat{font-size:18px;font-weight:600;margin-top:4px;}
+.check-row{display:flex;gap:20px;flex-wrap:wrap;}
+.check-label{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;}
+.check-label input{accent-color:var(--cyan);}
+.coming-soon{background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(79,70,229,0.05));border:1px solid rgba(124,58,237,0.3);border-radius:12px;padding:32px 24px;text-align:center;}
+.cs-icon{font-size:48px;margin-bottom:12px;}
+.cs-title{font-family:'Orbitron',monospace;font-size:16px;color:#a78bfa;margin-bottom:8px;}
+.cs-text{font-size:14px;color:var(--muted);}
+
+/* Affiliate banner inside tool panel */
+.aff-banner{margin-top:8px;background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(245,158,11,0.03));border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.aff-text{font-size:13px;color:var(--muted);}
+.aff-text strong{color:var(--gold);}
+.aff-btn{background:linear-gradient(135deg,var(--gold),#d97706);color:#000;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;font-family:'Exo 2',sans-serif;}
+.aff-btn:hover{opacity:0.9;}
+.aff-multi{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+.aff-chip{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--gold);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;}
+.aff-chip:hover{background:rgba(245,158,11,0.2);}
+
+/* Credit Cards Section */
+.promo-section{padding:0 24px 48px;max-width:1200px;margin:0 auto;}
+.promo-section-title{font-family:'Orbitron',monospace;font-size:13px;letter-spacing:3px;margin-bottom:6px;}
+.promo-section-title.gold{color:var(--gold);}
+.promo-section-title.purple{color:var(--purple);}
+.promo-subtitle{font-size:13px;color:var(--muted);margin-bottom:20px;}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+.promo-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;transition:all 0.25s;}
+.promo-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(245,158,11,0.1);}
+.promo-card.loan-card:hover{border-color:var(--purple);box-shadow:0 8px 24px rgba(167,139,250,0.1);}
+.promo-card-icon{font-size:28px;}
+.promo-card-name{font-size:14px;font-weight:700;color:var(--text);}
+.promo-card-desc{font-size:12px;color:var(--muted);flex:1;}
+.promo-card-badge{font-size:10px;background:rgba(245,158,11,0.12);color:var(--gold);border:1px solid rgba(245,158,11,0.2);padding:2px 8px;border-radius:10px;align-self:flex-start;}
+.promo-card-badge.purple{background:rgba(167,139,250,0.12);color:var(--purple);border-color:rgba(167,139,250,0.2);}
+.promo-apply-btn{background:linear-gradient(135deg,var(--gold),#d97706);color:#000;border:none;padding:9px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;font-family:'Exo 2',sans-serif;display:block;}
+.promo-apply-btn.purple{background:linear-gradient(135deg,var(--purple),#7c3aed);}
+.promo-apply-btn:hover{opacity:0.9;}
+
+/* Shopping deals banner */
+.deals-banner{background:linear-gradient(135deg,rgba(0,212,255,0.06),rgba(0,168,204,0.03));border:1px solid rgba(0,212,255,0.2);border-radius:14px;padding:20px 24px;margin-bottom:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin-left:auto;margin-right:auto;}
+.deals-banner-left{}
+.deals-banner-title{font-family:'Orbitron',monospace;font-size:14px;color:var(--cyan);margin-bottom:4px;}
+.deals-banner-sub{font-size:13px;color:var(--muted);}
+.deals-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.deal-chip{background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);color:var(--cyan);padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;}
+.deal-chip:hover{background:rgba(0,212,255,0.15);}
+
+.footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
+.footer-logo{font-family:'Orbitron',monospace;font-size:16px;color:var(--cyan);letter-spacing:3px;margin-bottom:8px;}
+.footer-text{font-size:12px;color:var(--muted);}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap;}
+.footer-link{font-size:12px;color:var(--muted);cursor:pointer;text-decoration:none;}
+.footer-link:hover{color:var(--cyan);}
+.hidden{display:none!important;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo" onclick="showHome()">
+    <div class="logo-icon">⚡</div>
+    <div>
+      <div class="logo-text">KITOOLS.IN</div>
+      <div class="logo-sub">FREE TOOLS FOR INDIA</div>
+    </div>
+  </div>
+  <div class="nav-badge">🟢 LIVE</div>
+</nav>
+
+<div id="homePage">
+  <section class="hero">
+    <div class="hero-eyebrow">// KITOOLS.IN — TOOLS ENGINE ONLINE</div>
+    <h1 class="hero-title">Every Tool You<br><span>Ever Needed.</span></h1>
+    <p class="hero-sub">Free. Fast. Built for India.</p>
+    <div class="hero-stats">
+      <div><div class="stat-num">13+</div><div class="stat-label">TOOLS LIVE</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">FREE</div></div>
+      <div><div class="stat-num">🇮🇳</div><div class="stat-label">INDIA FIRST</div></div>
+    </div>
+  </section>
+
+  <!-- Shopping Deals Banner -->
+  <div style="padding:0 24px;max-width:1200px;margin:0 auto 32px;">
+    <div class="deals-banner">
+      <div class="deals-banner-left">
+        <div class="deals-banner-title">🛍️ LIVE DEALS — SAVE BIG TODAY</div>
+        <div class="deals-banner-sub">Best offers from top Indian shopping platforms</div>
+        <div class="deals-chips">
+          <a class="deal-chip" href="https://fktr.in/hS4ok0w" target="_blank" rel="noopener">🛒 Flipkart Deals</a>
+          <a class="deal-chip" href="https://www.amazon.in/?tag=kimitrend-21" target="_blank" rel="noopener">📦 Amazon India</a>
+          <a class="deal-chip" href="https://ajiio.in/zj9NmX1" target="_blank" rel="noopener">👗 AJIO Fashion</a>
+          <a class="deal-chip" href="https://myntr.it/gmVEjLz" target="_blank" rel="noopener">💄 Myntra</a>
+          <a class="deal-chip" href="https://bitli.in/smQOcU2" target="_blank" rel="noopener">🏷️ Shopsy</a>
+          <a class="deal-chip" href="https://bitli.in/Wpvvu9S" target="_blank" rel="noopener">🌿 Mamaearth</a>
+          <a class="deal-chip" href="https://bitli.in/1Yd4xKK" target="_blank" rel="noopener">📺 Reliance Digital</a>
+          <a class="deal-chip" href="https://bitli.in/l7vc9KV" target="_blank" rel="noopener">☕ MCaffeine</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-section">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input id="searchInput" placeholder="Search tools — GST, EMI, QR Code..." oninput="filterTools()"/>
+    </div>
+  </div>
+
+  <div class="cat-scroll" id="catScroll"></div>
+
+  <div class="tools-section">
+    <div class="section-title" id="toolCount">// TOOLS AVAILABLE</div>
+    <div class="tools-grid" id="toolsGrid"></div>
+  </div>
+
+  <div id="toolPanel" class="hidden">
+    <div style="margin:0 24px 48px;max-width:1200px;margin-left:auto;margin-right:auto;background:var(--bg3);border:1px solid var(--cyan2);border-radius:16px;overflow:hidden;box-shadow:0 0 40px rgba(0,212,255,0.1);">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span class="panel-icon" id="panelIcon"></span>
+          <div>
+            <div class="panel-name" id="panelName"></div>
+            <div class="panel-cat" id="panelCat"></div>
+          </div>
+        </div>
+        <button class="close-btn" onclick="closeTool()">✕</button>
+      </div>
+      <div class="panel-body" id="panelBody"></div>
+    </div>
+  </div>
+
+  <!-- Credit Cards Section -->
+  <div class="promo-section">
+    <div class="promo-section-title gold">💳 BEST CREDIT CARDS — APPLY ONLINE</div>
+    <div class="promo-subtitle">Earn rewards, cashback & benefits. Instant approval on top cards.</div>
+    <div class="cards-grid">
+      <div class="promo-card">
+        <div class="promo-card-icon">🏦</div>
+        <div class="promo-card-name">Axis Bank CC</div>
+        <div class="promo-card-desc">Rewards on every spend. Fuel, dining & shopping benefits.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/sP7Kd2a" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">🏛️</div>
+        <div class="promo-card-name">SBI Credit Card</div>
+        <div class="promo-card-desc">India's most trusted. Cashback on groceries, fuel & online.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/93tZ1wi" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💜</div>
+        <div class="promo-card-name">IDFC FIRST Mayura</div>
+        <div class="promo-card-desc">Zero forex markup. Lounge access & premium lifestyle perks.</div>
+        <div class="promo-card-badge">⭐ Premium</div>
+        <a class="promo-apply-btn" href="https://bitli.in/WEe37pR" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💙</div>
+        <div class="promo-card-name">HDFC Credit Card</div>
+        <div class="promo-card-desc">Top rewards on Amazon, Flipkart & SmartBuy platform.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/el8rFms" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💚</div>
+        <div class="promo-card-name">American Express</div>
+        <div class="promo-card-desc">Membership rewards, travel benefits & exclusive privileges.</div>
+        <div class="promo-card-badge">⭐ Premium</div>
+        <a class="promo-apply-btn" href="https://bitli.in/kY848Bf" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">☁️</div>
+        <div class="promo-card-name">Times Prime</div>
+        <div class="promo-card-desc">Premium subscription — OTT, dining, travel & more in one.</div>
+        <div class="promo-card-badge">🎁 Offer</div>
+        <a class="promo-apply-btn" href="https://bitli.in/mqLuV5x" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Personal Loans Section -->
+  <div class="promo-section">
+    <div class="promo-section-title purple">⚡ INSTANT PERSONAL LOANS</div>
+    <div class="promo-subtitle">Quick approval. Paperless process. Money in your account fast.</div>
+    <div class="cards-grid">
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">💰</div>
+        <div class="promo-card-name">MyEazyLoan</div>
+        <div class="promo-card-desc">Compare & get best personal loan offers from top lenders.</div>
+        <div class="promo-card-badge purple">⚡ Fast Approval</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/94bMi8P" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">📱</div>
+        <div class="promo-card-name">FIBE (EarlySalary)</div>
+        <div class="promo-card-desc">Salary advance & personal loans up to ₹5L. 100% digital.</div>
+        <div class="promo-card-badge purple">⚡ Instant</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/NDMbcLh" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">🏍️</div>
+        <div class="promo-card-name">Bajaj Finserv</div>
+        <div class="promo-card-desc">Personal loans up to ₹40L. Flexible EMI, minimal docs.</div>
+        <div class="promo-card-badge purple">💼 Trusted</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/yblfOg8" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">🦸</div>
+        <div class="promo-card-name">Hero FinCorp</div>
+        <div class="promo-card-desc">Personal & business loans. Quick disbursal across India.</div>
+        <div class="promo-card-badge purple">⚡ Fast</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/ptZ0vNU" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital Tools Section -->
+  <div class="promo-section">
+    <div class="promo-section-title" style="color:var(--cyan);">🔧 DIGITAL TOOLS & SUBSCRIPTIONS</div>
+    <div class="promo-subtitle">Software and subscriptions for professionals.</div>
+    <div class="cards-grid">
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">☁️</div>
+        <div class="promo-card-name">Google Workspace</div>
+        <div class="promo-card-desc">Gmail, Drive, Docs for your business. Professional email domain.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">💼 Business</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/hx3KQrM" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">🎨</div>
+        <div class="promo-card-name">Adobe Creative</div>
+        <div class="promo-card-desc">Photoshop, Illustrator, Premiere & more. India pricing.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">🎨 Creative</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/vXX2p3P" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">💧</div>
+        <div class="promo-card-name">Ounce</div>
+        <div class="promo-card-desc">Premium wellness & lifestyle products. Exclusive deals.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">🛍️ Shop</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/V8gvtvz" target="_blank" rel="noopener">Shop Now →</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end homePage -->
+
+<footer class="footer">
+  <div class="footer-logo">⚡ KITOOLS.IN</div>
+  <div class="footer-text">Free tools for everyone. Made in India 🇮🇳</div>
+  <div class="footer-links">
+    <span class="footer-link">About</span>
+    <a class="footer-link" href="/privacy-policy.html">Privacy Policy</a>
+    <span class="footer-link">Contact</span>
+    <a class="footer-link" href="https://t.me/kimitrend" target="_blank">📢 Telegram Deals</a>
+  </div>
+</footer>
+
+<script>
+const TOOLS = [
+  {id:"gst",   icon:"🧾", name:"GST Calculator",       cat:"India Finance", tag:"🔥 Top"},
+  {id:"emi",   icon:"🏦", name:"EMI Calculator",        cat:"India Finance", tag:"🔥 Top"},
+  {id:"sip",   icon:"📈", name:"SIP Calculator",        cat:"India Finance", tag:"💰 Grow"},
+  {id:"disc",  icon:"🏷️", name:"Discount Calculator",   cat:"Shopping",      tag:"💰 Save"},
+  {id:"bmi",   icon:"⚖️", name:"BMI Calculator",        cat:"Health",        tag:""},
+  {id:"age",   icon:"🎂", name:"Age Calculator",        cat:"Utility",       tag:""},
+  {id:"pwd",   icon:"🔐", name:"Password Generator",    cat:"Security",      tag:"🛡️ Safe"},
+  {id:"qr",    icon:"📱", name:"QR Code Generator",     cat:"Utility",       tag:""},
+  {id:"word",  icon:"📝", name:"Word Counter",          cat:"Text Tools",    tag:""},
+  {id:"case",  icon:"🔤", name:"Case Converter",        cat:"Text Tools",    tag:""},
+  {id:"pct",   icon:"💯", name:"Percentage Calculator", cat:"Math",          tag:""},
+  {id:"unit",  icon:"📐", name:"Unit Converter",        cat:"Converters",    tag:""},
+  {id:"color", icon:"🎨", name:"Color Converter",       cat:"Design",        tag:"🎨"},
+  {id:"ai1",   icon:"🤖", name:"AI Text Rewriter",      cat:"AI Tools",      tag:"⚡ AI"},
+  {id:"ai2",   icon:"✉️", name:"AI Email Writer",       cat:"AI Tools",      tag:"⚡ AI"},
+];
+
+const CATS = ["All","India Finance","Shopping","Health","Security","Utility","Text Tools","Math","Converters","Design","AI Tools"];
+let activeCat = "All";
+let activeTool = null;
+
+const catScroll = document.getElementById("catScroll");
+CATS.forEach(c => {
+  const btn = document.createElement("button");
+  btn.className = "cat-btn" + (c === "All" ? " active" : "");
+  btn.textContent = c;
+  btn.onclick = () => { activeCat = c; document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active")); btn.classList.add("active"); filterTools(); };
+  catScroll.appendChild(btn);
+});
+
+function filterTools() {
+  const q = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = TOOLS.filter(t => (activeCat === "All" || t.cat === activeCat) && (t.name.toLowerCase().includes(q) || t.cat.toLowerCase().includes(q)));
+  document.getElementById("toolCount").textContent = `// ${filtered.length} TOOLS AVAILABLE`;
+  const grid = document.getElementById("toolsGrid");
+  grid.innerHTML = "";
+  filtered.forEach(t => {
+    const card = document.createElement("div");
+    card.className = "tool-card" + (activeTool === t.id ? " active" : "");
+    card.innerHTML = (t.tag ? `<span class="tool-tag">${t.tag}</span>` : "") + `<span class="tool-icon">${t.icon}</span><div class="tool-name">${t.name}</div><div class="tool-cat">${t.cat}</div>`;
+    card.onclick = () => openTool(t);
+    grid.appendChild(card);
+  });
+}
+
+function openTool(t) {
+  activeTool = t.id;
+  document.getElementById("panelIcon").textContent = t.icon;
+  document.getElementById("panelName").textContent = t.name.toUpperCase();
+  document.getElementById("panelCat").textContent = t.cat;
+  document.getElementById("toolPanel").classList.remove("hidden");
+  renderTool(t.id);
+  filterTools();
+  setTimeout(() => document.getElementById("toolPanel").scrollIntoView({behavior:"smooth"}), 50);
+}
+
+function closeTool() {
+  activeTool = null;
+  document.getElementById("toolPanel").classList.add("hidden");
+  filterTools();
+}
+
+function showHome() { window.scrollTo({top:0,behavior:"smooth"}); }
+
+function rc(label, value, cls="") {
+  return `<div class="res-card ${cls}"><div class="res-label">${label}</div><div class="res-value">${value}</div></div>`;
+}
+
+function affBanner(text, btnText, url) {
+  return `<div class="aff-banner"><div class="aff-text">${text}</div><a class="aff-btn" href="${url}" target="_blank" rel="noopener">${btnText}</a></div>`;
+}
+
+function affMulti(text, chips) {
+  const chipHtml = chips.map(([label,url])=>`<a class="aff-chip" href="${url}" target="_blank" rel="noopener">${label}</a>`).join("");
+  return `<div class="aff-banner" style="flex-direction:column;align-items:flex-start;gap:10px;"><div class="aff-text">${text}</div><div class="aff-multi">${chipHtml}</div></div>`;
+}
+
+function renderTool(id) {
+  const body = document.getElementById("panelBody");
+  body.innerHTML = "";
+
+  if (id === "gst") {
+    body.innerHTML = `
+      <div class="input-row"><label>Amount (₹)</label><input type="number" id="gAmt" placeholder="Enter amount" oninput="calcGST()"/></div>
+      <div class="input-row"><label>GST Rate</label><select id="gRate" onchange="calcGST()">
+        ${["0","0.1","0.25","1","1.5","3","5","6","7.5","12","18","28"].map(v=>`<option value="${v}"${v==="18"?" selected":""}>${v}%</option>`).join("")}
+      </select></div>
+      <div class="toggle-row">
+        <button class="tog active" id="gExcl" onclick="setGType('exclusive')">Excl. GST (Add GST)</button>
+        <button class="tog" id="gIncl" onclick="setGType('inclusive')">Incl. GST (Extract GST)</button>
+      </div>
+      <div class="results" id="gResults"><div style="color:var(--muted);font-size:13px;">Enter amount to calculate</div></div>
+      ${affBanner('📦 Need GST-compliant invoicing? <strong>Google Workspace</strong> for business email + Drive.','Get Google Workspace →','https://bitli.in/hx3KQrM')}`;
+    window._gtype = "exclusive";
+  }
+
+  else if (id === "emi") {
+    body.innerHTML = `
+      <div class="slider-row"><div class="slider-top"><label>Loan Amount (₹)</label><span class="slider-val" id="ePVal">₹5,00,000</span></div><input type="range" min="10000" max="10000000" step="10000" value="500000" oninput="document.getElementById('ePVal').textContent='₹'+parseInt(this.value).toLocaleString('en-IN');calcEMI()" id="eP"/></div>
+      <div class="slider-row"><div class="slider-top"><label>Interest Rate (%)</label><span class="slider-val" id="eRVal">8.5%</span></div><input type="range" min="1" max="30" step="0.1" value="8.5" oninput="document.getElementById('eRVal').textContent=this.value+'%';calcEMI()" id="eR"/></div>
+      <div class="slider-row"><div class="slider-top"><label>Tenure (months)</label><span class="slider-val" id="eTVal">60 mo</span></div><input type="range" min="6" max="360" step="6" value="60" oninput="document.getElementById('eTVal').textContent=this.value+' mo';calcEMI()" id="eT"/></div>
+      <div class="results" id="eResults"></div>
+      ${affMulti('💳 <strong>Planning a big purchase?</strong> Get the right credit card or instant loan:',[['Flipkart EMI','https://fktr.in/hS4ok0w'],['Amazon EMI','https://www.amazon.in/?tag=kimitrend-21'],['Reliance Digital','https://bitli.in/1Yd4xKK'],['Bajaj Loan','https://bitli.in/yblfOg8'],['FIBE Loan','https://bitli.in/NDMbcLh']])}`;
+    setTimeout(calcEMI, 10);
+  }
+
+  else if (id === "sip") {
+    body.innerHTML = `
+      <div class="slider-row"><div class="slider-top"><label>Monthly SIP (₹)</label><span class="slider-val" id="sMVal">₹5,000</span></div><input type="range" min="500" max="100000" step="500" value="5000" oninput="document.getElementById('sMVal').textContent='₹'+parseInt(this.value).toLocaleString('en-IN');calcSIP()" id="sM"/></div>
+      <div class="slider-row"><div class="slider-top"><label>Expected Returns (%)</label><span class="slider-val" id="sRVal">12%</span></div><input type="range" min="1" max="30" step="0.5" value="12" oninput="document.getElementById('sRVal').textContent=this.value+'%';calcSIP()" id="sR"/></div>
+      <div class="slider-row"><div class="slider-top"><label>Time Period (years)</label><span class="slider-val" id="sYVal">10 yrs</span></div><input type="range" min="1" max="40" step="1" value="10" oninput="document.getElementById('sYVal').textContent=this.value+' yrs';calcSIP()" id="sY"/></div>
+      <div class="results" id="sResults"></div>
+      ${affBanner('📈 <strong>Start your SIP today.</strong> Open a free demat account & invest in mutual funds instantly.','Explore Investments →','https://www.amazon.in/?tag=kimitrend-21')}`;
+    setTimeout(calcSIP, 10);
+  }
+
+  else if (id === "disc") {
+    body.innerHTML = `
+      <div class="input-row"><label>Original Price (₹)</label><input type="number" id="dP" placeholder="e.g. 2999" oninput="calcDisc()"/></div>
+      <div class="input-row"><label>Discount (%)</label><input type="number" id="dD" placeholder="e.g. 30" oninput="calcDisc()"/></div>
+      <div class="input-row"><label>Extra Coupon (%)</label><input type="number" id="dE" placeholder="e.g. 10 (optional)" oninput="calcDisc()"/></div>
+      <div class="results" id="dResults"><div style="color:var(--muted);font-size:13px;">Enter price to calculate</div></div>
+      ${affMulti('🛍️ <strong>Shop the best deals now:</strong>',[['Flipkart Sale','https://fktr.in/hS4ok0w'],['Amazon Offers','https://www.amazon.in/?tag=kimitrend-21'],['AJIO Fashion','https://ajiio.in/zj9NmX1'],['Myntra','https://myntr.it/gmVEjLz'],['Shopsy','https://bitli.in/smQOcU2']])}`;
+  }
+
+  else if (id === "bmi") {
+    body.innerHTML = `
+      <div class="toggle-row">
+        <button class="tog active" id="bMetric" onclick="setBUnit('metric')">Metric (kg/cm)</button>
+        <button class="tog" id="bImperial" onclick="setBUnit('imperial')">Imperial (lb/in)</button>
+      </div>
+      <div class="input-row"><label id="bWLabel">Weight (kg)</label><input type="number" id="bW" oninput="calcBMI()"/></div>
+      <div class="input-row"><label id="bHLabel">Height (cm)</label><input type="number" id="bH" oninput="calcBMI()"/></div>
+      <div id="bResult"></div>
+      ${affMulti('🌿 <strong>Wellness essentials:</strong>',[['MCaffeine','https://bitli.in/l7vc9KV'],['Mamaearth','https://bitli.in/Wpvvu9S'],['Myntra Health','https://myntr.it/gmVEjLz']])}`;
+    window._bunit = "metric";
+  }
+
+  else if (id === "age") {
+    body.innerHTML = `
+      <div class="input-row"><label>Date of Birth</label><input type="date" id="ageDob" max="${new Date().toISOString().split('T')[0]}" oninput="calcAge()"/></div>
+      <div class="results" id="ageResults"></div>`;
+  }
+
+  else if (id === "pwd") {
+    body.innerHTML = `
+      <div class="slider-row"><div class="slider-top"><label>Length</label><span class="slider-val" id="pLVal">16</span></div><input type="range" min="6" max="64" step="1" value="16" oninput="document.getElementById('pLVal').textContent=this.value" id="pL"/></div>
+      <div class="check-row">
+        <label class="check-label"><input type="checkbox" id="pUpper" checked> Uppercase</label>
+        <label class="check-label"><input type="checkbox" id="pLower" checked> Lowercase</label>
+        <label class="check-label"><input type="checkbox" id="pNums" checked> Numbers</label>
+        <label class="check-label"><input type="checkbox" id="pSyms" checked> Symbols</label>
+      </div>
+      <button class="primary-btn" onclick="genPwd()">⚡ Generate Password</button>
+      <div id="pwdResult"></div>
+      ${affBanner('🎨 <strong>Secure your creative work.</strong> Adobe Creative Cloud — design, edit & publish professionally.','Get Adobe CC →','https://bitli.in/vXX2p3P')}`;
+  }
+
+  else if (id === "qr") {
+    body.innerHTML = `
+      <div class="input-row"><label>Text / URL / UPI ID</label><input type="text" id="qrText" placeholder="Enter text or URL..."/></div>
+      <button class="primary-btn" onclick="genQR()">📱 Generate QR Code</button>
+      <div id="qrResult"></div>
+      ${affBanner('💼 <strong>Need a business QR for payments?</strong> Set up your Google Workspace business account.','Google Workspace →','https://bitli.in/hx3KQrM')}`;
+  }
+
+  else if (id === "word") {
+    body.innerHTML = `
+      <textarea class="text-area" id="wordText" rows="7" placeholder="Paste or type text here..." oninput="calcWord()"></textarea>
+      <div class="results3" id="wordResults">
+        ${rc("Words","0")}${rc("Characters","0")}${rc("Chars (no space)","0")}${rc("Sentences","0")}${rc("Paragraphs","0")}${rc("Read Time","~0 min","ac")}
+      </div>
+      ${affBanner('🎨 <strong>Writing content?</strong> Adobe Acrobat for PDFs, contracts & professional documents.','Get Adobe →','https://bitli.in/vXX2p3P')}`;
+  }
+
+  else if (id === "case") {
+    body.innerHTML = `
+      <textarea class="text-area" id="caseText" rows="4" placeholder="Type or paste text..."></textarea>
+      <div class="btn-grid">
+        ${[["upper","UPPER"],["lower","lower"],["title","Title"],["sentence","Sentence"],["camel","camelCase"],["snake","snake_case"],["kebab","kebab-case"],["reverse","esreveR"]].map(([m,l])=>`<button class="case-btn" onclick="convertCase('${m}',this)">${l}</button>`).join("")}
+      </div>
+      <div id="caseResult"></div>`;
+  }
+
+  else if (id === "pct") {
+    body.innerHTML = `
+      <div class="toggle-row">
+        ${[["pof","X% of Y"],["wpct","X is ?% of Y"],["chg","% Change"],["add","Add %"],["sub","Subtract %"]].map(([m,l])=>`<button class="tog${m==="pof"?" active":""}" onclick="setPctMode('${m}',this)">${l}</button>`).join("")}
+      </div>
+      <div class="input-row"><label id="pA_lbl">Percentage</label><input type="number" id="pA" oninput="calcPct()" placeholder="Enter value"/></div>
+      <div class="input-row"><label id="pB_lbl">Number</label><input type="number" id="pB" oninput="calcPct()" placeholder="Enter value"/></div>
+      <div id="pctResult"></div>`;
+    window._pmode = "pof";
+  }
+
+  else if (id === "unit") {
+    const units = {
+      length:["m","km","cm","mm","ft","inch","yard","mile"],
+      weight:["kg","g","mg","lb","oz","tonne"],
+      area:["m²","km²","cm²","ft²","acre","hectare"],
+      speed:["m/s","km/h","mph","knot"],
+      data:["B","KB","MB","GB","TB"],
+      temperature:["°C","°F","K"]
+    };
+    body.innerHTML = `
+      <div class="toggle-row">
+        ${Object.keys(units).map(c=>`<button class="tog${c==="length"?" active":""}" onclick="setUnitCat('${c}',this)">${c}</button>`).join("")}
+      </div>
+      <div class="input-row"><label>Value</label><input type="number" id="uVal" placeholder="Enter value" oninput="calcUnit()"/></div>
+      <div class="dual-sel">
+        <select id="uFrom" onchange="calcUnit()"></select>
+        <span style="color:var(--cyan);font-size:20px;">→</span>
+        <select id="uTo" onchange="calcUnit()"></select>
+      </div>
+      <div id="unitResult"></div>`;
+    window._ucat = "length";
+    window._units = units;
+    loadUnitOpts("length");
+  }
+
+  else if (id === "color") {
+    body.innerHTML = `
+      <div class="color-row">
+        <input type="color" id="colPicker" value="#00d4ff" oninput="syncColor(this.value)"/>
+        <input type="text" id="colHex" value="#00d4ff" maxlength="7" oninput="syncColor(this.value)" style="flex:1;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;font-family:monospace;outline:none;"/>
+      </div>
+      <div id="colPrev" class="color-prev" style="background:#00d4ff;"></div>
+      <div class="color-vals" id="colVals"></div>
+      ${affBanner('🎨 <strong>Design professionally.</strong> Adobe Creative Cloud — Photoshop, Illustrator & more.','Get Adobe CC →','https://bitli.in/vXX2p3P')}`;
+    syncColor("#00d4ff");
+  }
+
+  else if (id === "ai1" || id === "ai2") {
+    body.innerHTML = `
+      <div class="coming-soon">
+        <div class="cs-icon">🤖</div>
+        <div class="cs-title">AI FEATURE — COMING SOON</div>
+        <div class="cs-text">This AI-powered tool is currently being set up.<br>It will be live very soon!</div>
+      </div>`;
+  }
+}
+
+// GST
+window._gtype = "exclusive";
+function setGType(t) {
+  window._gtype = t;
+  document.getElementById("gExcl").classList.toggle("active", t==="exclusive");
+  document.getElementById("gIncl").classList.toggle("active", t==="inclusive");
+  calcGST();
+}
+function calcGST() {
+  const n = parseFloat(document.getElementById("gAmt").value)||0;
+  const r = parseFloat(document.getElementById("gRate").value)||0;
+  const t = window._gtype;
+  const gst = t==="exclusive" ? (n*r)/100 : n - n*100/(100+r);
+  const total = t==="exclusive" ? n+gst : n;
+  const base = t==="inclusive" ? n-gst : n;
+  const fmt = v => "₹"+v.toLocaleString("en-IN",{maximumFractionDigits:2});
+  document.getElementById("gResults").innerHTML = rc("Base Amount",fmt(base)) + rc(`GST (${r}%)`,fmt(gst),"ac") + rc("Total Amount",fmt(total),"hl");
+}
+
+// EMI
+function calcEMI() {
+  const P = parseFloat(document.getElementById("eP").value)||0;
+  const R = (parseFloat(document.getElementById("eR").value)||0)/12/100;
+  const N = parseFloat(document.getElementById("eT").value)||1;
+  const emi = R===0 ? P/N : P*R*Math.pow(1+R,N)/(Math.pow(1+R,N)-1);
+  const total = emi*N, interest = total-P;
+  const fmt = v => "₹"+Math.round(v).toLocaleString("en-IN");
+  document.getElementById("eResults").innerHTML = rc("Monthly EMI",fmt(emi),"hl") + rc("Total Interest",fmt(interest),"ac") + rc("Total Payment",fmt(total));
+}
+
+// SIP
+function calcSIP() {
+  const P = parseFloat(document.getElementById("sM").value)||0;
+  const r = (parseFloat(document.getElementById("sR").value)||0)/12/100;
+  const n = (parseFloat(document.getElementById("sY").value)||0)*12;
+  const mat = r===0 ? P*n : P*((Math.pow(1+r,n)-1)/r)*(1+r);
+  const inv = P*n, gains = mat-inv;
+  const fmt = v => "₹"+Math.round(v).toLocaleString("en-IN");
+  document.getElementById("sResults").innerHTML = rc("Amount Invested",fmt(inv)) + rc("Est. Returns",fmt(gains),"ac") + rc("Maturity Value",fmt(mat),"hl");
+}
+
+// Discount
+function calcDisc() {
+  const p = parseFloat(document.getElementById("dP").value)||0;
+  const d = parseFloat(document.getElementById("dD").value)||0;
+  const e = parseFloat(document.getElementById("dE").value)||0;
+  const a1 = p-(p*d/100);
+  const fin = a1-(a1*e/100);
+  const saved = p-fin;
+  document.getElementById("dResults").innerHTML = rc("After Discount","₹"+a1.toFixed(2)) + rc("You Save","₹"+saved.toFixed(2),"ac") + rc("Final Price","₹"+fin.toFixed(2),"hl");
+}
+
+// BMI
+window._bunit = "metric";
+function setBUnit(u) {
+  window._bunit = u;
+  document.getElementById("bMetric").classList.toggle("active",u==="metric");
+  document.getElementById("bImperial").classList.toggle("active",u==="imperial");
+  document.getElementById("bWLabel").textContent = "Weight ("+(u==="metric"?"kg":"lbs")+")";
+  document.getElementById("bHLabel").textContent = "Height ("+(u==="metric"?"cm":"inches")+")";
+  calcBMI();
+}
+function calcBMI() {
+  const w = parseFloat(document.getElementById("bW").value)||0;
+  const h = parseFloat(document.getElementById("bH").value)||1;
+  if(!w || !h) return;
+  let bmi = window._bunit==="metric" ? w/((h/100)*(h/100)) : 703*w/(h*h);
+  const cat = bmi<18.5?"Underweight":bmi<25?"Normal Weight":bmi<30?"Overweight":"Obese";
+  const col = bmi<18.5?"#60a5fa":bmi<25?"#4ade80":bmi<30?"#fbbf24":"#f87171";
+  document.getElementById("bResult").innerHTML = `<div class="bmi-result"><div class="bmi-score" style="color:${col}">${bmi.toFixed(1)}</div><div class="bmi-cat" style="color:${col}">${cat}</div></div>`;
+}
+
+// Age
+function calcAge() {
+  const dob = new Date(document.getElementById("ageDob").value);
+  if(!dob.getTime()) return;
+  const today = new Date();
+  let y=today.getFullYear()-dob.getFullYear(), m=today.getMonth()-dob.getMonth(), d=today.getDate()-dob.getDate();
+  if(d<0){m--;d+=new Date(today.getFullYear(),today.getMonth(),0).getDate();}
+  if(m<0){y--;m+=12;}
+  const totalDays = Math.floor((today-dob)/86400000);
+  document.getElementById("ageResults").innerHTML = rc(`Age`,`${y}Y ${m}M ${d}D`,"hl") + rc("Total Days",totalDays.toLocaleString(),"ac") + rc("Total Weeks",Math.floor(totalDays/7).toLocaleString());
+}
+
+// Password
+function genPwd() {
+  const len = parseInt(document.getElementById("pL").value);
+  const u = document.getElementById("pUpper").checked ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : "";
+  const l = document.getElementById("pLower").checked ? "abcdefghijklmnopqrstuvwxyz" : "";
+  const n = document.getElementById("pNums").checked ? "0123456789" : "";
+  const s = document.getElementById("pSyms").checked ? "!@#$%^&*()_+-=[]{}|;:,.<>?" : "";
+  let chars = u+l+n+s || "abcdefghijklmnopqrstuvwxyz";
+  const pwd = Array.from({length:len}, ()=>chars[Math.floor(Math.random()*chars.length)]).join("");
+  const str = len<8?1:len<12?2:len<16?3:4;
+  const cols = ["","#f87171","#fbbf24","#60a5fa","#4ade80"];
+  const labs = ["","Weak","Fair","Good","Strong"];
+  document.getElementById("pwdResult").innerHTML = `
+    <div class="pwd-box" onclick="navigator.clipboard.writeText('${pwd}');this.querySelector('span').textContent='✅ Copied!'">
+      ${pwd}<span style="float:right;font-size:12px;color:var(--muted)">📋 Copy</span>
+    </div>
+    <div style="background:var(--border);border-radius:3px;height:6px;margin-top:4px;">
+      <div style="width:${str*25}%;background:${cols[str]};height:6px;border-radius:3px;"></div>
+    </div>
+    <p style="color:${cols[str]};text-align:center;font-size:13px;margin-top:4px;">${labs[str]}</p>`;
+}
+
+// QR
+function genQR() {
+  const text = document.getElementById("qrText").value.trim();
+  if(!text) return;
+  const url = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(text)}`;
+  document.getElementById("qrResult").innerHTML = `<div class="qr-center"><img src="${url}" alt="QR Code"/><a href="${url}" download="qrcode.png" class="dl-btn">⬇️ Download QR</a></div>`;
+}
+
+// Word Counter
+function calcWord() {
+  const t = document.getElementById("wordText").value;
+  const words = t.trim() ? t.trim().split(/\s+/).length : 0;
+  const chars = t.length;
+  const charsNS = t.replace(/\s/g,"").length;
+  const sents = t.split(/[.!?]+/).filter(s=>s.trim()).length;
+  const paras = t.split(/\n\n+/).filter(p=>p.trim()).length;
+  const read = Math.ceil(words/200);
+  document.getElementById("wordResults").innerHTML = rc("Words",words)+rc("Characters",chars)+rc("Chars (no space)",charsNS)+rc("Sentences",sents)+rc("Paragraphs",paras)+rc("Read Time",`~${read} min`,"ac");
+}
+
+// Case Converter
+function convertCase(mode, btn) {
+  document.querySelectorAll(".case-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  const t = document.getElementById("caseText").value;
+  let r = t;
+  if(mode==="upper") r=t.toUpperCase();
+  else if(mode==="lower") r=t.toLowerCase();
+  else if(mode==="title") r=t.replace(/\w\S*/g,w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase());
+  else if(mode==="sentence") r=t.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g,c=>c.toUpperCase());
+  else if(mode==="camel") r=t.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g,(_,c)=>c.toUpperCase());
+  else if(mode==="snake") r=t.toLowerCase().replace(/\s+/g,"_");
+  else if(mode==="kebab") r=t.toLowerCase().replace(/\s+/g,"-");
+  else if(mode==="reverse") r=t.split("").reverse().join("");
+  const safe = r.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  document.getElementById("caseResult").innerHTML = `<div class="result-text">${safe}<button class="copy-mini" onclick="navigator.clipboard.writeText(\`${r.replace(/`/g,"\\`")}\`)">📋</button></div>`;
+}
+
+// Percentage
+window._pmode = "pof";
+const pLabels = {pof:["Percentage","Number"],wpct:["Value","Total"],chg:["Old Value","New Value"],add:["Number","Percentage"],sub:["Number","Percentage"]};
+function setPctMode(m, btn) {
+  window._pmode = m;
+  document.querySelectorAll(".tog").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("pA_lbl").textContent = pLabels[m][0];
+  document.getElementById("pB_lbl").textContent = pLabels[m][1];
+  document.getElementById("pA").value = "";
+  document.getElementById("pB").value = "";
+  document.getElementById("pctResult").innerHTML = "";
+}
+function calcPct() {
+  const a = parseFloat(document.getElementById("pA").value)||0;
+  const b = parseFloat(document.getElementById("pB").value)||0;
+  const m = window._pmode;
+  let ans = "";
+  if(m==="pof"&&b) ans=`${a}% of ${b} = ${(a*b/100).toFixed(2)}`;
+  else if(m==="wpct"&&b) ans=`${a} is ${((a/b)*100).toFixed(2)}% of ${b}`;
+  else if(m==="chg"&&a) ans=`Change: ${(((b-a)/a)*100).toFixed(2)}% (${b>a?"increase":"decrease"})`;
+  else if(m==="add") ans=`${a} + ${b}% = ${(a+(a*b/100)).toFixed(2)}`;
+  else if(m==="sub") ans=`${a} - ${b}% = ${(a-(a*b/100)).toFixed(2)}`;
+  document.getElementById("pctResult").innerHTML = ans ? `<div class="answer-box">${ans}</div>` : "";
+}
+
+// Unit Converter
+const uFactors = {
+  length:{m:1,km:0.001,cm:100,mm:1000,ft:3.28084,inch:39.3701,yard:1.09361,mile:0.000621371},
+  weight:{kg:1,g:1000,mg:1000000,lb:2.20462,oz:35.274,tonne:0.001},
+  area:{"m²":1,"km²":0.000001,"cm²":10000,"ft²":10.7639,"acre":0.000247105,"hectare":0.0001},
+  speed:{"m/s":1,"km/h":3.6,"mph":2.23694,"knot":1.94384},
+  data:{B:1,KB:0.001,MB:0.000001,GB:1e-9,TB:1e-12},
+};
+function loadUnitOpts(cat) {
+  const units = cat==="temperature" ? ["°C","°F","K"] : Object.keys(uFactors[cat]||{});
+  ["uFrom","uTo"].forEach((id,i) => {
+    const sel = document.getElementById(id);
+    if(sel){ sel.innerHTML = units.map((u,idx)=>`<option${idx===i?" selected":""}>${u}</option>`).join(""); }
+  });
+}
+function setUnitCat(c, btn) {
+  window._ucat = c;
+  document.querySelectorAll(".tog").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  loadUnitOpts(c);
+  document.getElementById("unitResult").innerHTML = "";
+}
+function calcUnit() {
+  const v = parseFloat(document.getElementById("uVal").value)||0;
+  const from = document.getElementById("uFrom").value;
+  const to = document.getElementById("uTo").value;
+  const cat = window._ucat;
+  let result = "";
+  if(cat==="temperature") {
+    if(from==="°C"&&to==="°F") result=(v*9/5+32).toFixed(2);
+    else if(from==="°F"&&to==="°C") result=((v-32)*5/9).toFixed(2);
+    else if(from==="°C"&&to==="K") result=(v+273.15).toFixed(2);
+    else if(from==="K"&&to==="°C") result=(v-273.15).toFixed(2);
+    else if(from==="°F"&&to==="K") result=((v-32)*5/9+273.15).toFixed(2);
+    else if(from==="K"&&to==="°F") result=((v-273.15)*9/5+32).toFixed(2);
+    else result=v;
+  } else if(uFactors[cat]&&uFactors[cat][from]&&uFactors[cat][to]) {
+    result = (v/uFactors[cat][from]*uFactors[cat][to]).toFixed(6).replace(/\.?0+$/,"");
+  }
+  document.getElementById("unitResult").innerHTML = result!==""&&v ? `<div class="answer-box">${v} ${from} = <strong>${result} ${to}</strong></div>` : "";
+}
+
+// Color Converter
+function syncColor(val) {
+  const isValid = /^#[0-9A-Fa-f]{6}$/.test(val);
+  if(isValid) {
+    document.getElementById("colPicker").value = val;
+    document.getElementById("colHex").value = val;
+    document.getElementById("colPrev").style.background = val;
+    const r=parseInt(val.slice(1,3),16),g=parseInt(val.slice(3,5),16),b=parseInt(val.slice(5,7),16);
+    let rn=r/255,gn=g/255,bn=b/255;
+    const max=Math.max(rn,gn,bn),min=Math.min(rn,gn,bn);
+    let h,s,l=(max+min)/2;
+    if(max===min){h=s=0;}else{const d=max-min;s=l>0.5?d/(2-max-min):d/(max+min);switch(max){case rn:h=(gn-bn)/d+(gn<bn?6:0);break;case gn:h=(bn-rn)/d+2;break;default:h=(rn-gn)/d+4;}h/=6;}
+    const hsl=`hsl(${Math.round(h*360)}°, ${Math.round(s*100)}%, ${Math.round(l*100)}%)`;
+    const rgb=`rgb(${r}, ${g}, ${b})`;
+    document.getElementById("colVals").innerHTML = [["HEX",val],["RGB",rgb],["HSL",hsl]].map(([lbl,v])=>`
+      <div class="color-val-row" onclick="navigator.clipboard.writeText('${v}')">
+        <span class="cv-label">${lbl}</span><span class="cv-val">${v}</span><span style="color:var(--muted);font-size:12px;">📋</span>
+      </div>`).join("");
+  }
+}
+
+filterTools();
+</script>
+</body>
+</html>
