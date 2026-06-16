@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--bg:#050a12;--bg2:#0a1220;--bg3:#0f1a2e;--cyan:#00d4ff;--cyan2:#00a8cc;--gold:#f59e0b;--green:#00ff88;--border:#1a3050;--text:#e2e8f0;--muted:#64748b;--card:#0d1f35;--card2:#0a1828;}
+:root{--bg:#050a12;--bg2:#0a1220;--bg3:#0f1a2e;--cyan:#00d4ff;--cyan2:#00a8cc;--gold:#f59e0b;--green:#00ff88;--purple:#a78bfa;--border:#1a3050;--text:#e2e8f0;--muted:#64748b;--card:#0d1f35;--card2:#0a1828;}
 body{background:var(--bg);color:var(--text);font-family:'Exo 2',sans-serif;min-height:100vh;overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;background:linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;}
 .nav{position:sticky;top:0;z-index:100;background:rgba(5,10,18,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
@@ -110,6 +110,45 @@ input[type=color]{width:56px;height:44px;border-radius:8px;border:2px solid var(
 .cs-icon{font-size:48px;margin-bottom:12px;}
 .cs-title{font-family:'Orbitron',monospace;font-size:16px;color:#a78bfa;margin-bottom:8px;}
 .cs-text{font-size:14px;color:var(--muted);}
+
+/* Affiliate banner inside tool panel */
+.aff-banner{margin-top:8px;background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(245,158,11,0.03));border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.aff-text{font-size:13px;color:var(--muted);}
+.aff-text strong{color:var(--gold);}
+.aff-btn{background:linear-gradient(135deg,var(--gold),#d97706);color:#000;border:none;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;font-family:'Exo 2',sans-serif;}
+.aff-btn:hover{opacity:0.9;}
+.aff-multi{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+.aff-chip{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--gold);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;}
+.aff-chip:hover{background:rgba(245,158,11,0.2);}
+
+/* Credit Cards Section */
+.promo-section{padding:0 24px 48px;max-width:1200px;margin:0 auto;}
+.promo-section-title{font-family:'Orbitron',monospace;font-size:13px;letter-spacing:3px;margin-bottom:6px;}
+.promo-section-title.gold{color:var(--gold);}
+.promo-section-title.purple{color:var(--purple);}
+.promo-subtitle{font-size:13px;color:var(--muted);margin-bottom:20px;}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+.promo-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;transition:all 0.25s;}
+.promo-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(245,158,11,0.1);}
+.promo-card.loan-card:hover{border-color:var(--purple);box-shadow:0 8px 24px rgba(167,139,250,0.1);}
+.promo-card-icon{font-size:28px;}
+.promo-card-name{font-size:14px;font-weight:700;color:var(--text);}
+.promo-card-desc{font-size:12px;color:var(--muted);flex:1;}
+.promo-card-badge{font-size:10px;background:rgba(245,158,11,0.12);color:var(--gold);border:1px solid rgba(245,158,11,0.2);padding:2px 8px;border-radius:10px;align-self:flex-start;}
+.promo-card-badge.purple{background:rgba(167,139,250,0.12);color:var(--purple);border-color:rgba(167,139,250,0.2);}
+.promo-apply-btn{background:linear-gradient(135deg,var(--gold),#d97706);color:#000;border:none;padding:9px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;font-family:'Exo 2',sans-serif;display:block;}
+.promo-apply-btn.purple{background:linear-gradient(135deg,var(--purple),#7c3aed);}
+.promo-apply-btn:hover{opacity:0.9;}
+
+/* Shopping deals banner */
+.deals-banner{background:linear-gradient(135deg,rgba(0,212,255,0.06),rgba(0,168,204,0.03));border:1px solid rgba(0,212,255,0.2);border-radius:14px;padding:20px 24px;margin-bottom:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin-left:auto;margin-right:auto;}
+.deals-banner-left{}
+.deals-banner-title{font-family:'Orbitron',monospace;font-size:14px;color:var(--cyan);margin-bottom:4px;}
+.deals-banner-sub{font-size:13px;color:var(--muted);}
+.deals-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.deal-chip{background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);color:var(--cyan);padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;}
+.deal-chip:hover{background:rgba(0,212,255,0.15);}
+
 .footer{border-top:1px solid var(--border);padding:32px 24px;text-align:center;}
 .footer-logo{font-family:'Orbitron',monospace;font-size:16px;color:var(--cyan);letter-spacing:3px;margin-bottom:8px;}
 .footer-text{font-size:12px;color:var(--muted);}
@@ -144,6 +183,26 @@ input[type=color]{width:56px;height:44px;border-radius:8px;border:2px solid var(
     </div>
   </section>
 
+  <!-- Shopping Deals Banner -->
+  <div style="padding:0 24px;max-width:1200px;margin:0 auto 32px;">
+    <div class="deals-banner">
+      <div class="deals-banner-left">
+        <div class="deals-banner-title">🛍️ LIVE DEALS — SAVE BIG TODAY</div>
+        <div class="deals-banner-sub">Best offers from top Indian shopping platforms</div>
+        <div class="deals-chips">
+          <a class="deal-chip" href="https://fktr.in/hS4ok0w" target="_blank" rel="noopener">🛒 Flipkart Deals</a>
+          <a class="deal-chip" href="https://www.amazon.in/?tag=kimitrend-21" target="_blank" rel="noopener">📦 Amazon India</a>
+          <a class="deal-chip" href="https://ajiio.in/zj9NmX1" target="_blank" rel="noopener">👗 AJIO Fashion</a>
+          <a class="deal-chip" href="https://myntr.it/gmVEjLz" target="_blank" rel="noopener">💄 Myntra</a>
+          <a class="deal-chip" href="https://bitli.in/smQOcU2" target="_blank" rel="noopener">🏷️ Shopsy</a>
+          <a class="deal-chip" href="https://bitli.in/Wpvvu9S" target="_blank" rel="noopener">🌿 Mamaearth</a>
+          <a class="deal-chip" href="https://bitli.in/1Yd4xKK" target="_blank" rel="noopener">📺 Reliance Digital</a>
+          <a class="deal-chip" href="https://bitli.in/l7vc9KV" target="_blank" rel="noopener">☕ MCaffeine</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="search-section">
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
@@ -173,15 +232,132 @@ input[type=color]{width:56px;height:44px;border-radius:8px;border:2px solid var(
       <div class="panel-body" id="panelBody"></div>
     </div>
   </div>
-</div>
+
+  <!-- Credit Cards Section -->
+  <div class="promo-section">
+    <div class="promo-section-title gold">💳 BEST CREDIT CARDS — APPLY ONLINE</div>
+    <div class="promo-subtitle">Earn rewards, cashback & benefits. Instant approval on top cards.</div>
+    <div class="cards-grid">
+      <div class="promo-card">
+        <div class="promo-card-icon">🏦</div>
+        <div class="promo-card-name">Axis Bank CC</div>
+        <div class="promo-card-desc">Rewards on every spend. Fuel, dining & shopping benefits.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/sP7Kd2a" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">🏛️</div>
+        <div class="promo-card-name">SBI Credit Card</div>
+        <div class="promo-card-desc">India's most trusted. Cashback on groceries, fuel & online.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/93tZ1wi" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💜</div>
+        <div class="promo-card-name">IDFC FIRST Mayura</div>
+        <div class="promo-card-desc">Zero forex markup. Lounge access & premium lifestyle perks.</div>
+        <div class="promo-card-badge">⭐ Premium</div>
+        <a class="promo-apply-btn" href="https://bitli.in/WEe37pR" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💙</div>
+        <div class="promo-card-name">HDFC Credit Card</div>
+        <div class="promo-card-desc">Top rewards on Amazon, Flipkart & SmartBuy platform.</div>
+        <div class="promo-card-badge">✅ Instant Apply</div>
+        <a class="promo-apply-btn" href="https://bitli.in/el8rFms" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">💚</div>
+        <div class="promo-card-name">American Express</div>
+        <div class="promo-card-desc">Membership rewards, travel benefits & exclusive privileges.</div>
+        <div class="promo-card-badge">⭐ Premium</div>
+        <a class="promo-apply-btn" href="https://bitli.in/kY848Bf" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card">
+        <div class="promo-card-icon">☁️</div>
+        <div class="promo-card-name">Times Prime</div>
+        <div class="promo-card-desc">Premium subscription — OTT, dining, travel & more in one.</div>
+        <div class="promo-card-badge">🎁 Offer</div>
+        <a class="promo-apply-btn" href="https://bitli.in/mqLuV5x" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Personal Loans Section -->
+  <div class="promo-section">
+    <div class="promo-section-title purple">⚡ INSTANT PERSONAL LOANS</div>
+    <div class="promo-subtitle">Quick approval. Paperless process. Money in your account fast.</div>
+    <div class="cards-grid">
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">💰</div>
+        <div class="promo-card-name">MyEazyLoan</div>
+        <div class="promo-card-desc">Compare & get best personal loan offers from top lenders.</div>
+        <div class="promo-card-badge purple">⚡ Fast Approval</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/94bMi8P" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">📱</div>
+        <div class="promo-card-name">FIBE (EarlySalary)</div>
+        <div class="promo-card-desc">Salary advance & personal loans up to ₹5L. 100% digital.</div>
+        <div class="promo-card-badge purple">⚡ Instant</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/NDMbcLh" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">🏍️</div>
+        <div class="promo-card-name">Bajaj Finserv</div>
+        <div class="promo-card-desc">Personal loans up to ₹40L. Flexible EMI, minimal docs.</div>
+        <div class="promo-card-badge purple">💼 Trusted</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/yblfOg8" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+      <div class="promo-card loan-card">
+        <div class="promo-card-icon">🦸</div>
+        <div class="promo-card-name">Hero FinCorp</div>
+        <div class="promo-card-desc">Personal & business loans. Quick disbursal across India.</div>
+        <div class="promo-card-badge purple">⚡ Fast</div>
+        <a class="promo-apply-btn purple" href="https://bitli.in/ptZ0vNU" target="_blank" rel="noopener">Apply Now →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital Tools Section -->
+  <div class="promo-section">
+    <div class="promo-section-title" style="color:var(--cyan);">🔧 DIGITAL TOOLS & SUBSCRIPTIONS</div>
+    <div class="promo-subtitle">Software and subscriptions for professionals.</div>
+    <div class="cards-grid">
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">☁️</div>
+        <div class="promo-card-name">Google Workspace</div>
+        <div class="promo-card-desc">Gmail, Drive, Docs for your business. Professional email domain.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">💼 Business</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/hx3KQrM" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">🎨</div>
+        <div class="promo-card-name">Adobe Creative</div>
+        <div class="promo-card-desc">Photoshop, Illustrator, Premiere & more. India pricing.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">🎨 Creative</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/vXX2p3P" target="_blank" rel="noopener">Get Now →</a>
+      </div>
+      <div class="promo-card" style="border-color:rgba(0,212,255,0.15);">
+        <div class="promo-card-icon">💧</div>
+        <div class="promo-card-name">Ounce</div>
+        <div class="promo-card-desc">Premium wellness & lifestyle products. Exclusive deals.</div>
+        <div class="promo-card-badge" style="background:rgba(0,212,255,0.1);color:var(--cyan);border-color:rgba(0,212,255,0.2);">🛍️ Shop</div>
+        <a class="promo-apply-btn" style="background:linear-gradient(135deg,var(--cyan),var(--cyan2));" href="https://bitli.in/V8gvtvz" target="_blank" rel="noopener">Shop Now →</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end homePage -->
 
 <footer class="footer">
   <div class="footer-logo">⚡ KITOOLS.IN</div>
   <div class="footer-text">Free tools for everyone. Made in India 🇮🇳</div>
   <div class="footer-links">
     <span class="footer-link">About</span>
-    <span class="footer-link">Privacy Policy</span>
+    <a class="footer-link" href="/privacy-policy.html">Privacy Policy</a>
     <span class="footer-link">Contact</span>
+    <a class="footer-link" href="https://t.me/kimitrend" target="_blank">📢 Telegram Deals</a>
   </div>
 </footer>
 
@@ -208,7 +384,6 @@ const CATS = ["All","India Finance","Shopping","Health","Security","Utility","Te
 let activeCat = "All";
 let activeTool = null;
 
-// Build category buttons
 const catScroll = document.getElementById("catScroll");
 CATS.forEach(c => {
   const btn = document.createElement("button");
@@ -256,6 +431,15 @@ function rc(label, value, cls="") {
   return `<div class="res-card ${cls}"><div class="res-label">${label}</div><div class="res-value">${value}</div></div>`;
 }
 
+function affBanner(text, btnText, url) {
+  return `<div class="aff-banner"><div class="aff-text">${text}</div><a class="aff-btn" href="${url}" target="_blank" rel="noopener">${btnText}</a></div>`;
+}
+
+function affMulti(text, chips) {
+  const chipHtml = chips.map(([label,url])=>`<a class="aff-chip" href="${url}" target="_blank" rel="noopener">${label}</a>`).join("");
+  return `<div class="aff-banner" style="flex-direction:column;align-items:flex-start;gap:10px;"><div class="aff-text">${text}</div><div class="aff-multi">${chipHtml}</div></div>`;
+}
+
 function renderTool(id) {
   const body = document.getElementById("panelBody");
   body.innerHTML = "";
@@ -270,7 +454,8 @@ function renderTool(id) {
         <button class="tog active" id="gExcl" onclick="setGType('exclusive')">Excl. GST (Add GST)</button>
         <button class="tog" id="gIncl" onclick="setGType('inclusive')">Incl. GST (Extract GST)</button>
       </div>
-      <div class="results" id="gResults"><div style="color:var(--muted);font-size:13px;">Enter amount to calculate</div></div>`;
+      <div class="results" id="gResults"><div style="color:var(--muted);font-size:13px;">Enter amount to calculate</div></div>
+      ${affBanner('📦 Need GST-compliant invoicing? <strong>Google Workspace</strong> for business email + Drive.','Get Google Workspace →','https://bitli.in/hx3KQrM')}`;
     window._gtype = "exclusive";
   }
 
@@ -279,7 +464,8 @@ function renderTool(id) {
       <div class="slider-row"><div class="slider-top"><label>Loan Amount (₹)</label><span class="slider-val" id="ePVal">₹5,00,000</span></div><input type="range" min="10000" max="10000000" step="10000" value="500000" oninput="document.getElementById('ePVal').textContent='₹'+parseInt(this.value).toLocaleString('en-IN');calcEMI()" id="eP"/></div>
       <div class="slider-row"><div class="slider-top"><label>Interest Rate (%)</label><span class="slider-val" id="eRVal">8.5%</span></div><input type="range" min="1" max="30" step="0.1" value="8.5" oninput="document.getElementById('eRVal').textContent=this.value+'%';calcEMI()" id="eR"/></div>
       <div class="slider-row"><div class="slider-top"><label>Tenure (months)</label><span class="slider-val" id="eTVal">60 mo</span></div><input type="range" min="6" max="360" step="6" value="60" oninput="document.getElementById('eTVal').textContent=this.value+' mo';calcEMI()" id="eT"/></div>
-      <div class="results" id="eResults"></div>`;
+      <div class="results" id="eResults"></div>
+      ${affMulti('💳 <strong>Planning a big purchase?</strong> Get the right credit card or instant loan:',[['Flipkart EMI','https://fktr.in/hS4ok0w'],['Amazon EMI','https://www.amazon.in/?tag=kimitrend-21'],['Reliance Digital','https://bitli.in/1Yd4xKK'],['Bajaj Loan','https://bitli.in/yblfOg8'],['FIBE Loan','https://bitli.in/NDMbcLh']])}`;
     setTimeout(calcEMI, 10);
   }
 
@@ -288,7 +474,8 @@ function renderTool(id) {
       <div class="slider-row"><div class="slider-top"><label>Monthly SIP (₹)</label><span class="slider-val" id="sMVal">₹5,000</span></div><input type="range" min="500" max="100000" step="500" value="5000" oninput="document.getElementById('sMVal').textContent='₹'+parseInt(this.value).toLocaleString('en-IN');calcSIP()" id="sM"/></div>
       <div class="slider-row"><div class="slider-top"><label>Expected Returns (%)</label><span class="slider-val" id="sRVal">12%</span></div><input type="range" min="1" max="30" step="0.5" value="12" oninput="document.getElementById('sRVal').textContent=this.value+'%';calcSIP()" id="sR"/></div>
       <div class="slider-row"><div class="slider-top"><label>Time Period (years)</label><span class="slider-val" id="sYVal">10 yrs</span></div><input type="range" min="1" max="40" step="1" value="10" oninput="document.getElementById('sYVal').textContent=this.value+' yrs';calcSIP()" id="sY"/></div>
-      <div class="results" id="sResults"></div>`;
+      <div class="results" id="sResults"></div>
+      ${affBanner('📈 <strong>Start your SIP today.</strong> Open a free demat account & invest in mutual funds instantly.','Explore Investments →','https://www.amazon.in/?tag=kimitrend-21')}`;
     setTimeout(calcSIP, 10);
   }
 
@@ -297,7 +484,8 @@ function renderTool(id) {
       <div class="input-row"><label>Original Price (₹)</label><input type="number" id="dP" placeholder="e.g. 2999" oninput="calcDisc()"/></div>
       <div class="input-row"><label>Discount (%)</label><input type="number" id="dD" placeholder="e.g. 30" oninput="calcDisc()"/></div>
       <div class="input-row"><label>Extra Coupon (%)</label><input type="number" id="dE" placeholder="e.g. 10 (optional)" oninput="calcDisc()"/></div>
-      <div class="results" id="dResults"><div style="color:var(--muted);font-size:13px;">Enter price to calculate</div></div>`;
+      <div class="results" id="dResults"><div style="color:var(--muted);font-size:13px;">Enter price to calculate</div></div>
+      ${affMulti('🛍️ <strong>Shop the best deals now:</strong>',[['Flipkart Sale','https://fktr.in/hS4ok0w'],['Amazon Offers','https://www.amazon.in/?tag=kimitrend-21'],['AJIO Fashion','https://ajiio.in/zj9NmX1'],['Myntra','https://myntr.it/gmVEjLz'],['Shopsy','https://bitli.in/smQOcU2']])}`;
   }
 
   else if (id === "bmi") {
@@ -308,7 +496,8 @@ function renderTool(id) {
       </div>
       <div class="input-row"><label id="bWLabel">Weight (kg)</label><input type="number" id="bW" oninput="calcBMI()"/></div>
       <div class="input-row"><label id="bHLabel">Height (cm)</label><input type="number" id="bH" oninput="calcBMI()"/></div>
-      <div id="bResult"></div>`;
+      <div id="bResult"></div>
+      ${affMulti('🌿 <strong>Wellness essentials:</strong>',[['MCaffeine','https://bitli.in/l7vc9KV'],['Mamaearth','https://bitli.in/Wpvvu9S'],['Myntra Health','https://myntr.it/gmVEjLz']])}`;
     window._bunit = "metric";
   }
 
@@ -328,14 +517,16 @@ function renderTool(id) {
         <label class="check-label"><input type="checkbox" id="pSyms" checked> Symbols</label>
       </div>
       <button class="primary-btn" onclick="genPwd()">⚡ Generate Password</button>
-      <div id="pwdResult"></div>`;
+      <div id="pwdResult"></div>
+      ${affBanner('🎨 <strong>Secure your creative work.</strong> Adobe Creative Cloud — design, edit & publish professionally.','Get Adobe CC →','https://bitli.in/vXX2p3P')}`;
   }
 
   else if (id === "qr") {
     body.innerHTML = `
       <div class="input-row"><label>Text / URL / UPI ID</label><input type="text" id="qrText" placeholder="Enter text or URL..."/></div>
       <button class="primary-btn" onclick="genQR()">📱 Generate QR Code</button>
-      <div id="qrResult"></div>`;
+      <div id="qrResult"></div>
+      ${affBanner('💼 <strong>Need a business QR for payments?</strong> Set up your Google Workspace business account.','Google Workspace →','https://bitli.in/hx3KQrM')}`;
   }
 
   else if (id === "word") {
@@ -343,7 +534,8 @@ function renderTool(id) {
       <textarea class="text-area" id="wordText" rows="7" placeholder="Paste or type text here..." oninput="calcWord()"></textarea>
       <div class="results3" id="wordResults">
         ${rc("Words","0")}${rc("Characters","0")}${rc("Chars (no space)","0")}${rc("Sentences","0")}${rc("Paragraphs","0")}${rc("Read Time","~0 min","ac")}
-      </div>`;
+      </div>
+      ${affBanner('🎨 <strong>Writing content?</strong> Adobe Acrobat for PDFs, contracts & professional documents.','Get Adobe →','https://bitli.in/vXX2p3P')}`;
   }
 
   else if (id === "case") {
@@ -398,7 +590,8 @@ function renderTool(id) {
         <input type="text" id="colHex" value="#00d4ff" maxlength="7" oninput="syncColor(this.value)" style="flex:1;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:14px;font-family:monospace;outline:none;"/>
       </div>
       <div id="colPrev" class="color-prev" style="background:#00d4ff;"></div>
-      <div class="color-vals" id="colVals"></div>`;
+      <div class="color-vals" id="colVals"></div>
+      ${affBanner('🎨 <strong>Design professionally.</strong> Adobe Creative Cloud — Photoshop, Illustrator & more.','Get Adobe CC →','https://bitli.in/vXX2p3P')}`;
     syncColor("#00d4ff");
   }
 
@@ -645,7 +838,6 @@ function syncColor(val) {
   }
 }
 
-// Init
 filterTools();
 </script>
 </body>
