@@ -36,6 +36,7 @@
   --glow2:0 0 20px rgba(180,79,255,0.3);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Exo 2',sans-serif;min-height:100vh;overflow-x:hidden;}
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:6px;}
@@ -178,7 +179,15 @@ footer{text-align:center;padding:40px 20px;border-top:1px solid var(--border);co
 footer a{color:var(--cyan);text-decoration:none;}
 .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;}
 
-/* DEALS & OFFERS SECTION */
+/* ABOUT SECTION */
+.about-section{margin-top:50px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px 28px;scroll-margin-top:140px;}
+.about-section h2{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;letter-spacing:2px;color:var(--cyan);margin-bottom:14px;text-transform:uppercase;}
+.about-section p{font-size:.85rem;color:var(--text);line-height:1.7;margin-bottom:14px;max-width:760px;}
+.about-section p:last-child{margin-bottom:0;}
+.about-section .about-muted{color:var(--muted);font-size:.78rem;}
+.about-contact{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;}
+.about-contact a{font-family:'Orbitron',monospace;font-size:.7rem;letter-spacing:1px;color:var(--cyan);text-decoration:none;border:1px solid var(--border);padding:8px 16px;border-radius:6px;transition:.2s;}
+.about-contact a:hover{border-color:var(--cyan);box-shadow:var(--glow);}
 .deals-section{margin-top:40px;}
 .deals-intro{font-size:.75rem;color:var(--muted);margin:-8px 0 20px;max-width:700px;}
 .deal-category{margin-bottom:26px;}
@@ -662,8 +671,8 @@ footer a{color:var(--cyan);text-decoration:none;}
         <div class="result-row"><span>MICR</span><span id="ifsc-micr"></span></div>
       </div>
       <div class="inline-aff">
-        <p>💳 Need quick funds? Check Hero FinCorp loans</p>
-        <a class="aff-btn" href="https://bitli.in/ptZ0vNU" target="_blank" rel="nofollow noopener">CHECK ELIGIBILITY</a>
+        <p>💳 Need quick funds? Check Bajaj Finserv loans</p>
+        <a class="aff-btn" href="https://bitli.in/yblfOg8" target="_blank" rel="nofollow noopener">CHECK ELIGIBILITY</a>
       </div>
     </div>
   </div>
@@ -1767,7 +1776,6 @@ footer a{color:var(--cyan);text-decoration:none;}
       <a class="deal-chip" href="https://bitli.in/94bMi8P" target="_blank" rel="nofollow noopener">MyEazyLoan</a>
       <a class="deal-chip" href="https://bitli.in/NDMbcLh" target="_blank" rel="nofollow noopener">FIBE</a>
       <a class="deal-chip" href="https://bitli.in/yblfOg8" target="_blank" rel="nofollow noopener">Bajaj Finserv</a>
-      <a class="deal-chip" href="https://bitli.in/ptZ0vNU" target="_blank" rel="nofollow noopener">Hero FinCorp</a>
       <a class="deal-chip" href="https://bitli.in/0c00TAP" target="_blank" rel="nofollow noopener">HDFC Instant Loan</a>
       <a class="deal-chip" href="https://bitli.in/qlt8nq5" target="_blank" rel="nofollow noopener">HDFC Smart EMI</a>
       <a class="deal-chip" href="https://bitli.in/xPV0SZo" target="_blank" rel="nofollow noopener">HDFC Personal Loan</a>
@@ -1880,10 +1888,25 @@ footer a{color:var(--cyan);text-decoration:none;}
 
 </div><!-- end deals-section -->
 
+<!-- ═══════════════ ABOUT SECTION ═══════════ -->
+<div class="about-section" id="about">
+  <h2>About KiTools.in</h2>
+  <p>KiTools is built and maintained by the <strong>KiTools Team</strong> — a small group based in India that got tired of bouncing between five different websites just to calculate GST, check an EMI, or convert a few units. So we built one place that does it all, properly, without forcing a login or burying the calculator under three pages of ads before you can use it.</p>
+  <p>Every tool on this page runs entirely in your browser — your numbers, salary details, and personal inputs are never sent to our servers or stored anywhere. The five tools marked <strong>AI-Powered</strong> are the exception: those send only the specific text you type (like a job title or product name) to Anthropic's Claude API to generate a result, and nothing else about you is shared.</p>
+  <p>We keep the lights on through affiliate partnerships — when you click through to a card, loan, or shopping deal in our <strong>Deals & Offers</strong> section and complete a purchase or application, we may earn a small commission. It never costs you anything extra, and it's how a free tool site like this stays free. We only list partners we've personally checked are live and working.</p>
+  <p class="about-muted">Have a tool idea, found a broken link, or just want to say hello? We'd genuinely like to hear it.</p>
+  <div class="about-contact">
+    <a href="mailto:hello@kitools.in">✉️ hello@kitools.in</a>
+    <a href="https://t.me/kimitrend" target="_blank" rel="noopener">📢 Telegram</a>
+    <a href="https://instagram.com/dealchunao" target="_blank" rel="noopener">📸 Instagram</a>
+  </div>
+</div>
+
 </main>
 
 <footer>
   <div class="footer-links">
+    <a href="#about">About</a>
     <a href="/privacy-policy.html">Privacy Policy</a>
     <a href="https://t.me/kimitrend" target="_blank">📢 Telegram Deals</a>
     <a href="https://wa.me/918668748282" target="_blank">💬 WhatsApp Deals</a>
