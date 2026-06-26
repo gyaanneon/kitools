@@ -1,0 +1,20 @@
+{
+  "name": "kitools",
+  "version": "1.0.0",
+  "description": "70 Free Smart Tools for Indians",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "tools",
+    "calculators",
+    "pdf",
+    "utilities"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
